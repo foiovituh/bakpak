@@ -73,14 +73,14 @@ create_backup() {
   local from_basename="$(basename "$from")"
   local file_prefix="${prefix:-$from_basename}"
   local file_path="${to}${file_prefix}_$(date +'%F_%H-%M-%S').${extension}"
-  local tar="tar -czf \"$file_path\" -C \"$from_dirname\" \"$from_basename\""
+  local cmd="tar -czf \"$file_path\" -C \"$from_dirname\" \"$from_basename\""
 
   if [[ "$dry_run" == true ]]; then
-    echo "$tar"
+    echo "$cmd"
     exit 0;
   fi
 
-  if ! eval "$tar" 2> "$LOG_ERROR_PATH"; then
+  if ! eval "$cmd" 2> "$LOG_ERROR_PATH"; then
     warn "Backup failed! See ${LOG_ERROR_PATH} for details."
   fi
 
