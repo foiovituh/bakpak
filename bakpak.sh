@@ -1,7 +1,7 @@
 #!/bin/bash -e
 declare -r LOG_ERROR_PATH='/tmp/bakpak_errors.log';
 declare -r EXECUTION_PATH="$(dirname "$0")"
-declare -r VERSION='2.0.0'
+declare -r VERSION='2.0.1'
 declare -r TAR_GZ='tar.gz'
 declare -r TAR='tar'
 
