@@ -21,8 +21,6 @@ warn() {
 
 show_help() {
     cat <<EOF
-Basic usage:   bakpak <from> <to>
-
 Required:
   -f <path>    Directory to back up (must be readable)
   -t <path>    Directory to store the compressed archive (must be writable)
@@ -35,7 +33,7 @@ Optional:
 
 Examples:
   bakpak -f ~/Documents -t /mnt/backups
-  bakpak -f ~/Documents -t /mnt/backups -p docs-backup -u
+  bakpak -f ~/Documents -t /mnt/backups -p uncompressed_documents -u
 
 Author:
   Vituh        <foiovituh@outlook.com>

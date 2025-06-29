@@ -44,18 +44,24 @@ $ sudo ln -s "$PWD/bakpak.sh" /usr/local/bin/bakpak
 ```
 
 ## Usage 🚀
+Required:
 ```bash
-bakpak <from> <to>
+-f <path>    Directory to back up (must be readable)
+-t <path>    Directory to store the compressed archive (must be writable)
 ```
 
-* **from** must be a readable directory.
-* **to**   must be a writable directory.
-
-Example:
-
+Optional:
 ```bash
-$ bakpak /home/president/Documents /mnt/backups
-2025-06-22T14:55:03 | Backup created at: /mnt/backups/
+-v           Show script version
+-h           Show this help message
+-p           Custom backup name prefix
+-u           Create uncompressed .tar archive
+```
+
+Examples:
+```bash
+bakpak -f ~/Documents -t /mnt/backups
+bakpak -f ~/Documents -t /mnt/backups -p uncompressed_documents -u
 ```
 
 ## Automation ⏰
