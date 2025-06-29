@@ -46,9 +46,9 @@ Required:
 Optional:
 ```bash
 -v           Show script version
--h           Show this help message
+-h           Show a help message
 -u           Uncompressed mode - create .tar archive
--d           Dry-run mode — no backups will be created, only  displayed
+-d           Dry-run mode — no backups will be created, only displayed
 ```
 
 Examples:
