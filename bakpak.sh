@@ -49,7 +49,7 @@ create_backup() {
         warn "-f must be readable and -t must be writable directories"
     fi
 
-    local extension="$([[ "$no_compress" == true ]] \
+    local extension="$([[ "$uncompressed" == true ]] \
         && echo "$TAR" \
         || echo "$TAR_GZ")"
     
