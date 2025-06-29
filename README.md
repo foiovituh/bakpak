@@ -8,19 +8,12 @@ A minimal Bash utility that turns any directory into a timestamped, compressed a
 ## Summary 📝
 - [BakPak 💾](#bakpak-)
   - [Summary 📝](#summary-)
-  - [Features ✨](#features-)
   - [Confirmed Working On ✅](#confirmed-working-on-)
   - [Installation 📦](#installation-)
   - [Usage 🚀](usage-)
   - [Automation ⏰](#automation-)
   - [Do you want help me? 👥](#do-you-want-help-me-)
   - [License 🏳️](#license-️)
-
-## Features ✨
-* **Portable** (only relies on `tar`, `gzip` and `readlink`).
-* **Safety first** (sanity‑checks that source *and* destination are accessible).
-* **Human‑readable logging** (ISO‑8601 timestamps).
-* **Zero‑config** (drop the script anywhere and run).
 
 ## Confirmed Working On ✅
 | Component   | Version / Notes                        |
