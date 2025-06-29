@@ -62,7 +62,7 @@ bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 Running a monthly backup at 5 PM on the 1st day of every month with `cron`:
 
 ```cron
-0 17 1 * * /usr/local/bin/bakpak /home/president/Documents /mnt/backups
+0 17 1 * * /usr/local/bin/bakpak -f /home/president/Documents -t /mnt/backups
 ```
 
 ## Do you want help me? 👥
