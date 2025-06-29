@@ -15,8 +15,8 @@ log() {
 
 warn() {
     log "[WARN] $1"
-    echo -e "\n---\n"
-    show_help 1
+    echo -e "\n---\n\nTry 'bakpak -h' for more information"
+    exit 1
 }
 
 show_help() {
