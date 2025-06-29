@@ -10,7 +10,7 @@ A minimal Bash utility that turns any directory into a timestamped, compressed a
   - [Summary 📝](#summary-)
   - [Confirmed Working On ✅](#confirmed-working-on-)
   - [Installation 📦](#installation-)
-  - [Usage 🚀](usage-)
+  - [Usage 🚀](#usage-)
   - [Automation ⏰](#automation-)
   - [Do you want help me? 👥](#do-you-want-help-me-)
   - [License 🏳️](#license-️)
