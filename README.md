@@ -47,14 +47,15 @@ Optional:
 ```bash
 -v           Show script version
 -h           Show this help message
--p           Custom backup name prefix
--u           Create uncompressed .tar archive
+-u           Uncompressed mode - create .tar archive
+-d           Dry-run mode — no backups will be created, only  displayed
 ```
 
 Examples:
 ```bash
-bakpak -f ~/Documents -t /mnt/backups
-bakpak -f ~/Documents -t /mnt/backups -p uncompressed_documents -u
+bakpak -f ~/Documents -t /mnt/docs_backup
+bakpak -f ~/Tests -t /mnt/backup_simulations -d
+bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 ```
 
 ## Automation ⏰
