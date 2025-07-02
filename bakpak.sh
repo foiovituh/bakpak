@@ -4,7 +4,7 @@ readonly LOGS_DIRECTORY="${HOME}/.bakpak/logs"
 readonly LOG_SUCCESS_PATH="${LOGS_DIRECTORY}/successes.log"
 readonly LOG_ERROR_PATH="${LOGS_DIRECTORY}/errors.log"
 readonly EXECUTION_PATH="$(dirname "$0")"
-readonly VERSION='2.1.0'
+readonly VERSION='2.2.0'
 
 get_timestamp() {
   date +"%Y-%m-%dT%H:%M:%S"
