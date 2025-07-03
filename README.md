@@ -55,15 +55,14 @@ Examples:
 ```bash
 bakpak -f ~/Documents -t /mnt/docs_backup
 bakpak -f ~/Tests -t /mnt/backup_simulations -d
+bakpak -f /home/user/folder -t /mnt/backups -c "0 17 1 * *"
 bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 ```
 
-## Automation ⏰
-Running a monthly backup at 5 PM on the 1st day of every month with `cron`:
+## Cron ⏰
+When using the `-c` option, you must provide a valid **cron expression** (e.g., `0 17 1 * *`) that defines the schedule for the backup. For more details on cron syntax, see: [crontab.guru](https://crontab.guru/)
 
-```cron
-0 17 1 * * /usr/local/bin/bakpak -f /home/president/Documents -t /mnt/backups
-```
+Also, both paths for `-f` (from) and `-t` (to) **must be absolute paths** (starting with `/`) to ensure proper execution by cron.
 
 ## Do you want help me? 👥
 If you have any ideas or wish to contribute to the project, contact me on X (<a href="https://x.com/ohtoaki" target="_blank">@ohtoaki</a>) or send me a pull request :)
