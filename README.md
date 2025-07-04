@@ -49,6 +49,7 @@ Optional:
 -h           Show a help message
 -u           Uncompressed mode - create a .tar without gzip compression
 -d           Dry-run mode — no backups will be created, only displayed
+-c           Schedule backup as a cron job using the specified cron expression
 ```
 
 Examples:
