@@ -3,7 +3,7 @@
 
 ![Image](https://github.com/user-attachments/assets/918876a4-28e6-44d4-9ec0-8334997aeb3f)
 
-A minimal Bash utility that turns any directory into a timestamped, compressed archive.
+>Simple Bash script to create timestamped `.tar` or `.tar.gz` backups from directories, designed for easy cron scheduling.
 
 ## Summary 📌
 - [BakPak 💾](#bakpak-)
