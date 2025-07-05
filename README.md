@@ -32,7 +32,7 @@ $ cd bakpak
 # 2. Make the script executable
 $ chmod +x bakpak.sh
 
-# 3 Install system‑wide
+# 3. Install system‑wide
 $ sudo ln -s "$PWD/bakpak.sh" /usr/local/bin/bakpak
 ```
 
