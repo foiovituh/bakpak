@@ -1,19 +1,19 @@
 # BakPak 💾
 ![GitHub License](https://img.shields.io/github/license/foiovituh/bakpak)
 
-![Image](https://github.com/user-attachments/assets/cc4d443d-f1f2-4a34-8b59-f073e5ed0321)
+![Image](https://github.com/user-attachments/assets/918876a4-28e6-44d4-9ec0-8334997aeb3f)
 
 A minimal Bash utility that turns any directory into a timestamped, compressed archive.
 
-## Summary 📝
+## Summary 📌
 - [BakPak 💾](#bakpak-)
-  - [Summary 📝](#summary-)
+  - [Summary 📌](#summary-)
   - [Confirmed Working On ✅](#confirmed-working-on-)
   - [Installation 📦](#installation-)
   - [Usage 🚀](#usage-)
-  - [Automation ⏰](#automation-)
+  - [Cron ⏰](#cron-)
   - [Do you want help me? 👥](#do-you-want-help-me-)
-  - [License 🏳️](#license-️)
+  - [License 📄](#license-️)
 
 ## Confirmed Working On ✅
 | Component   | Version / Notes                        |
@@ -49,14 +49,21 @@ Optional:
 -h           Show a help message
 -u           Uncompressed mode - create a .tar without gzip compression
 -d           Dry-run mode — no backups will be created, only displayed
--c           Schedule backup as a cron job using the specified cron expression
+-c <expr>    Schedule backup as a cron job using the specified cron expression
 ```
 
 Examples:
 ```bash
+# Instant backup (.tar.gz) of the `from` directory to the `to` directory:
 bakpak -f ~/Documents -t /mnt/docs_backup
+
+# Perform a dry-run to display the backup command without creating any files:
 bakpak -f ~/Tests -t /mnt/backup_simulations -d
+
+# Schedule a backup job to run at 17:00 on the first day of every month using cron:
 bakpak -f /home/user/folder -t /mnt/backups -c "0 17 1 * *"
+
+# Create an uncompressed archive (.tar) with a custom backup prefix:
 bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 ```
 
