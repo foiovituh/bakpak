@@ -1,7 +1,7 @@
 # BakPak 💾
 ![GitHub License](https://img.shields.io/github/license/foiovituh/bakpak)
 
-![Image](https://github.com/user-attachments/assets/918876a4-28e6-44d4-9ec0-8334997aeb3f)
+![Image](https://github.com/user-attachments/assets/dc80cff7-71da-46af-9371-8802f7f191b3)
 
 >Simple Bash script to create timestamped `.tar` or `.tar.gz` backups from directories, designed for easy cron scheduling.
 
@@ -12,6 +12,7 @@
   - [Installation 📦](#installation-)
   - [Usage 🚀](#usage-)
   - [Cron ⏰](#cron-)
+  - [Logs 🔍](#logs-)
   - [Do you want help me? 👥](#do-you-want-help-me-)
   - [License 📄](#license-️)
 
@@ -71,6 +72,14 @@ bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 When using the `-c` option, you must provide a valid **cron expression** (e.g., `0 17 1 * *`) that defines the schedule for the backup. For more details on cron syntax, see: [crontab.guru](https://crontab.guru/)
 
 Also, both paths for `-f` (from) and `-t` (to) **must be absolute paths** (starting with `/`) to ensure proper execution by cron.
+
+## Logs 🔍
+To make tracking easier, all backup activity is automatically logged:
+
+| Type       | Path                                      |
+|------------|-------------------------------------------|
+| Success ✅ | `~/.bakpak/logs/successes.log`            |
+| Error   ❌ | `~/.bakpak/logs/errors.log`               |
 
 ## Do you want help me? 👥
 If you have any ideas or wish to contribute to the project, contact me on X (<a href="https://x.com/ohtoaki" target="_blank">@ohtoaki</a>) or send me a pull request :)

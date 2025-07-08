@@ -54,6 +54,10 @@ Examples:
   bakpak -f /home/user/folder -t /mnt/backups -c "0 17 1 * *"
   bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 
+Logs:
+  Successful backups are logged at:    ~/.bakpak/logs/successes.log
+  Errors are logged at:                ~/.bakpak/logs/errors.log
+
 Author:
   Vituh        <foiovituh@outlook.com>
   GitHub:      https://github.com/foiovituh
