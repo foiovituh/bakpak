@@ -1,5 +1,6 @@
 # BakPak 💾
 ![GitHub License](https://img.shields.io/github/license/foiovituh/bakpak)
+![GitHub Release](https://img.shields.io/github/v/release/foiovituh/bakpak)
 
 ![Image](https://github.com/user-attachments/assets/dc80cff7-71da-46af-9371-8802f7f191b3)
 
