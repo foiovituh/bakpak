@@ -1,51 +1,27 @@
-# BakPak 💾
+# 💾 BakPak
 ![GitHub License](https://img.shields.io/github/license/foiovituh/bakpak)
 ![GitHub Release](https://img.shields.io/github/v/release/foiovituh/bakpak)
 
+> 🧠 A lightweight Bash script for timestamped directory backups — easy to automate with cron.
+
 ![Image](https://github.com/user-attachments/assets/dc80cff7-71da-46af-9371-8802f7f191b3)
 
->Simple Bash script to create timestamped `.tar` or `.tar.gz` backups from directories, designed for easy cron scheduling.
-
-## Summary 📌
-- [BakPak 💾](#bakpak-)
-  - [Summary 📌](#summary-)
-  - [Confirmed Working On ✅](#confirmed-working-on-)
-  - [Installation 📦](#installation-)
-  - [Usage 🚀](#usage-)
-  - [Cron ⏰](#cron-)
-  - [Logs 🔍](#logs-)
-  - [Do you want help me? 👥](#do-you-want-help-me-)
-  - [License 📄](#license-️)
-
-## Confirmed Working On ✅
-| Component   | Version / Notes                        |
-| ----------- | -------------------------------------- |
-| **Bash**    | 5.2.21 (GNU)                           |
-| **GNU tar** | 1.35                                   |
-| **gzip**    | 1.12                                   |
-| **OS**      | Ubuntu 24.04 (kernel 6.8.0-60-generic) |
-
-## Installation 📦
+## 📦 Installation
 ```bash
-# 1. Clone the repository
-$ git clone https://github.com/foiovituh/bakpak.git
-$ cd bakpak
-
-# 2. Make the script executable
-$ chmod +x bakpak.sh
-
-# 3. Install system‑wide
-$ sudo ln -s "$PWD/bakpak.sh" /usr/local/bin/bakpak
+git clone https://github.com/foiovituh/bakpak.git
+cd bakpak
+chmod +x bakpak.sh
+sudo ln -s "$PWD/bakpak.sh" /usr/local/bin/bakpak
 ```
 
-## Usage 🚀
-Required:
+## 🚀 Usage
+### Required:
 ```bash
 -f <path>    Directory to back up (must be readable)
 -t <path>    Directory to store the compressed archive (must be writable)
 ```
 
-Optional:
+### Optional:
 ```bash
 -v           Show script version
 -h           Show a help message
@@ -54,36 +30,43 @@ Optional:
 -c <expr>    Schedule backup as a cron job using the specified cron expression
 ```
 
-Examples:
+### Examples:
+
+- Basic backup (compressed):
 ```bash
-# Instant backup (.tar.gz) of the `from` directory to the `to` directory:
 bakpak -f ~/Documents -t /mnt/docs_backup
+```
 
-# Perform a dry-run to display the backup command without creating any files:
+- Dry-run (no files created):
+```bash
 bakpak -f ~/Tests -t /mnt/backup_simulations -d
+```
 
-# Schedule a backup job to run at 17:00 on the first day of every month using cron:
+- Cron job (1st day of month at 17:00):
+```bash
 bakpak -f /home/user/folder -t /mnt/backups -c "0 17 1 * *"
+```
 
-# Create an uncompressed archive (.tar) with a custom backup prefix:
+- Uncompressed backup with custom name:
+```bash
 bakpak -f ~/projects/president -t /mnt/d/band -p uncompressed_site_project -u
 ```
 
-## Cron ⏰
-When using the `-c` option, you must provide a valid **cron expression** (e.g., `0 17 1 * *`) that defines the schedule for the backup. For more details on cron syntax, see: [crontab.guru](https://crontab.guru/)
+## ⏰ Cron Scheduling
+Use the `-c` option with a valid [cron expression](https://crontab.guru) (e.g., `0 17 1 * *`) to schedule automatic backups.
 
-Also, both paths for `-f` (from) and `-t` (to) **must be absolute paths** (starting with `/`) to ensure proper execution by cron.
+Make sure both `-f` (from) and `-t` (to) arguments use **absolute paths** (starting with `/`) so cron runs correctly.
 
-## Logs 🔍
-To make tracking easier, all backup activity is automatically logged:
+## 🔍 Logs
+All backup activity is automatically logged:
 
 | Type       | Path                                      |
 |------------|-------------------------------------------|
-| Success ✅ | `~/.bakpak/logs/successes.log`            |
-| Error   ❌ | `~/.bakpak/logs/errors.log`               |
+| ✅ Success | `~/.bakpak/logs/successes.log`            |
+| ❌ Error   | `~/.bakpak/logs/errors.log`               |
 
-## Do you want help me? 👥
-If you have any ideas or wish to contribute to the project, contact me on X (<a href="https://x.com/ohtoaki" target="_blank">@ohtoaki</a>) or send me a pull request :)
+## ⭐ Support the Project
+If you like this project or find it useful, please give it a star! It helps with visibility and motivates continued development.
 
-## License 📄
+## 📄 License
 Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
